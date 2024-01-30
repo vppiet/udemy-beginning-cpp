@@ -1,9 +1,5 @@
 #include <iostream>
 
-int foo() {
-    return 1;
-}
-
 int main() {
     int favorite_number;
 
