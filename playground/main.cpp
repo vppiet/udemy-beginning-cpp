@@ -1,14 +1,21 @@
 #include <iostream>
-#include <cstring>
+#include <string>
+
+using namespace std;
+
+void swap(int &a, int &b);
+
+void foo(string &);
 
 int main() {
-    int luku;
-    int *osoitin;
-    osoitin = &luku;
+    int x{10}, y{20};
+    cout << x << " " << y << endl;
+    swap(x, y);
+    cout << x << " " << y << endl;
+}
 
-    char mj[]{"Bjarne"};
-    std::cout << mj << std::endl;
-    std::cout << sizeof(mj) << std::endl;
-
-    std::cout << "Exiting...\n";
+void swap(int &a, int &b) {
+    int temp = a;
+    a = b;
+    b = temp;
 }
