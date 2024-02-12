@@ -1,21 +1,20 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-void swap(int &a, int &b);
-
-void foo(string &);
-
 int main() {
-    int x{10}, y{20};
-    cout << x << " " << y << endl;
-    swap(x, y);
-    cout << x << " " << y << endl;
-}
+    const int num{10};
 
-void swap(int &a, int &b) {
-    int temp = a;
-    a = b;
-    b = temp;
+    cout << "Value of num is: " << num << endl;
+    cout << "sizeof of num is: " << sizeof(num) << endl;
+    cout << "Address of num is: " << &num << endl;
+
+    int *p;
+    cout << "Value of p is: " << p << endl;
+    cout << "sizeof of p is: " << sizeof(p) << endl;
+    cout << "Address of p is: " << &p << endl;
+    p = nullptr;
+    cout << "Value of p is: " << p << endl;
+
+    return 0;
 }
