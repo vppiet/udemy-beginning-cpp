@@ -1,20 +1,23 @@
 #include <iostream>
+#include <string>
 
-using namespace std;
+std::string reverse_string(const std::string &str) {
+    std::string reversed;
+    const char* start = str.c_str();
+    const char* end = str.c_str() + str.size() - 1;
+ex
+    while (end >= start) {
+        reversed.push_back(*end);
+        end--;
+    }
+
+    return reversed;
+}
 
 int main() {
-    const int num{10};
-
-    cout << "Value of num is: " << num << endl;
-    cout << "sizeof of num is: " << sizeof(num) << endl;
-    cout << "Address of num is: " << &num << endl;
-
-    int *p;
-    cout << "Value of p is: " << p << endl;
-    cout << "sizeof of p is: " << sizeof(p) << endl;
-    cout << "Address of p is: " << &p << endl;
-    p = nullptr;
-    cout << "Value of p is: " << p << endl;
+    std::string input = "Hello, World!";
+    std::string reversed = reverse_string(input);
+    std::cout << reversed << std::endl;
 
     return 0;
 }
